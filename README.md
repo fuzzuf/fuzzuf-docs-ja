@@ -10,26 +10,28 @@ fuzzufの文書は、当初日本語で書かれた文書が主であり、そ�
 
 ## 文書一覧
 
-対応するfuzzufバージョン: [v0.1.0](https://github.com/fuzzuf/fuzzuf/tree/838ef5df6b7b20d202717946342bf6b4f3908297)
+対応するfuzzufバージョン: [v0.2.0](https://github.com/fuzzuf/fuzzuf/tree/v0.2.0)
 
 - [README_ja.md](/README_ja.md)
 - [チュートリアル](/TUTORIAL_ja.md)
 - [なぜfuzzufはRustに移行しなかったのか (Why we didn't move to Rust)](/docs/why_we_didnt_move_to_rust_ja.md)
 - AFL:
-  - [algorithm_ja.md](/docs/algorithms/AFL/algorithm_ja.md)
-  - [implementation_ja.md](/docs/algorithms/AFL/implementation_ja.md)
+  - [algorithm_ja.md](/docs/algorithms/afl/algorithm_ja.md)
+  - [implementation_ja.md](/docs/algorithms/afl/implementation_ja.md)
 - AFLFast:
-  - [algorithm_ja.md](/docs/algorithms/AFLFast/algorithm_ja.md)
-  - [implementation_ja.md](/docs/algorithms/AFLFast/implementation_ja.md)
+  - [algorithm_ja.md](/docs/algorithms/aflfast/algorithm_ja.md)
+  - [implementation_ja.md](/docs/algorithms/aflfast/implementation_ja.md)
+- DIE:
+  - [algorithm_ja.md](/docs/algorithms/die/algorithm_ja.md)
 - libFuzzer:
-  - [algorithm_ja.md](/docs/algorithms/libFuzzer/algorithm_ja.md)
-  - [porting_status_ja.md](/docs/algorithms/libFuzzer/porting_status_ja.md)
+  - [algorithm_ja.md](/docs/algorithms/libfuzzer/algorithm_ja.md)
+  - [porting_status_ja.md](/docs/algorithms/libfuzzer/porting_status_ja.md)
 - Nezha:
-  - [algorithm_ja.md](/docs/algorithms/Nezha/algorithm_ja.md)
-  - [porting_status_ja.md](/docs/algorithms/Nezha/porting_status_ja.md)
+  - [algorithm_ja.md](/docs/algorithms/nezha/algorithm_ja.md)
+  - [porting_status_ja.md](/docs/algorithms/nezha/porting_status_ja.md)
 - VUzzer:
-  - [algorithm_ja.md](/docs/algorithms/VUzzer/algorithm_ja.md)
-  - [build_ja.md](/docs/algorithms/VUzzer/build_ja.md)
+  - [algorithm_ja.md](/docs/algorithms/vuzzer/algorithm_ja.md)
+  - [build_ja.md](/docs/algorithms/vuzzer/build_ja.md)
 
 ## ライセンス
 

@@ -6,7 +6,7 @@ https://github.com/google/AFL
 
 AFL(American Fuzzy Lop)は、2013年にMichał Zalewskiによって開発されたカバレッジガイデッドファザーです。AFLは、自身の持つキューに保持されているシードを1つ選択し、それに改変を加えることで未知の実行パスを発見しようとする、いわゆるミューテーションベースドファザーと呼ばれる種のファザーです。言い換えれば、AFLはシードに対して遺伝的アルゴリズムを適用します。
 
-AFLの特筆すべき点は、多くのアルゴリズムの基礎となっていることでしょう。AFLの実装を一部改変することで、性能の向上[^1] [^2] [^3]、動作対象となるPUTや環境の拡張[^4] [^5]や特殊な用途への転換[^6] [^7]を達成した様々な研究が存在しています。
+AFLの特筆すべき点は、多くのアルゴリズムの基礎となっていることでしょう。AFLの実装を一部改変することで、性能の向上[^1] [^2] [^3]、動作対象となるPUTや環境の拡張[^4] [^5]や特殊な用途への転換[^6] [^7]を達成した様々な研究が存在しています。このようにAFLは現在のファジング研究のベースとなっていることからfuzzuf上で再実装されました。
 
 ## CLI上での使用方法
 
@@ -35,7 +35,7 @@ fuzzuf afl --in_dir=path/to/initial/seeds/ -- path/to/PUT @@
   - `--dict_file=path/to/dict/file`
     - 追加の辞書ファイルへのパスを指定します。
 
-その他、fuzzuf上での実装の詳細については [implementation_ja.md](/docs/algorithms/AFL/implementation_ja.md) を参照してください。
+その他、fuzzuf上での実装の詳細については [implementation_ja.md](/docs/algorithms/afl/implementation_ja.md) を参照してください。
 
 ## アルゴリズム概要
 

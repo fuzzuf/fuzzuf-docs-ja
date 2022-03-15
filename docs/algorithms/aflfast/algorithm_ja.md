@@ -2,8 +2,10 @@
 
 ## AFLFastとは
 
-[AFLFast](https://github.com/mboehme/aflfast)[^ccs16]は、Michał Zalewskiによって開発された[AFL](https://github.com/google/AFL)を拡張したファザーです。本稿で触れないAFLの基本的なアルゴリズムについては[AFL/algorithm_ja.md](/docs/algorithms/AFL/algorithm_ja.md)を参照してください。
-AFLFastを開発したMarcel Böhmeのチームは、AFLがあるシードから生成した入力のほとんどが同じパスを通り、興味深い挙動を示す他のパスはあまり通らないことを発見しました。これらの挙動を改善することによって、脆弱性に起因したバグを引き起こす入力をAFLのおよそ7倍高速に発見できるようになりました。
+https://github.com/mboehme/aflfast
+
+AFLFast[^ccs16]は、Michał Zalewskiによって開発された[AFL](https://github.com/google/AFL)を拡張したファザーです。本稿で触れないAFLの基本的なアルゴリズムについては[AFL/algorithm_ja.md](/docs/algorithms/afl/algorithm_ja.md)を参照してください。
+AFLFastを開発したMarcel Böhmeのチームは、AFLがあるシードから生成した入力のほとんどが同じパスを通り、興味深い挙動を示す他のパスはあまり通らないことを発見しました。これらの挙動を改善することによって、脆弱性に起因したバグを引き起こす入力をAFLのおよそ7倍高速に発見できるようになりました。AFLFastは、AFLの拡張として広く受け入れられており、AFLベースの研究のベースラインとして用いられていることからfuzzufでも実装されています。
 
 ## CLI上での使用方法
 
@@ -13,7 +15,7 @@ fuzzufではAFLFastはAFLと同様に使えます。次のようにして実行�
 fuzzuf aflfast --in_dir=path/to/initial/seeds/ -- path/to/PUT @@
 ```
 
-指定可能なグローバルなオプションはAFLと同様です。AFLのオプションについては[AFL/algorithm_ja.md](/docs/algorithms/AFL/algorithm_ja.md)を参照してください。
+指定可能なグローバルなオプションはAFLと同様です。AFLのオプションについては[AFL/algorithm_ja.md](/docs/algorithms/afl/algorithm_ja.md)を参照してください。
 なお、現時点ではAFLFast固有のローカルなオプションはなく、CLIでのスケジュールのオプションが未実装なため、CLIからはFASTのみが利用できます。
 
 ## アルゴリズム概要

@@ -4,13 +4,13 @@
 
 https://llvm.org/docs/LibFuzzer.html
 
-libFuzzerはLLVMプロジェクトのcompiler-rtのライブラリの1つとして提供されているgreybox fuzzingの実装である。
+libFuzzerはLLVMプロジェクトのcompiler-rtのライブラリの1つとして提供されているgreybox fuzzingの実装である。AFLと同じく広く使われており、現在のファジング研究のベースとなっていることからfuzzufでの再実装を行なった。
 
 libFuzzerはcorpusに記録されている入力値をもとにmutationで新しい入力値を作り、その入力値でfuzzingの対象を実行し、カバレッジ等を調べて珍しいパスを通っていたり、珍しい振る舞いをしていれば新しい入力値をcorpusに追加するという操作を繰り返す。ここからわかるようにlibFuzzerは大雑把にはAFLとよく似た手順で動くfuzzerである。ただしAFLと比較して以下の点が大きく異なっている
 
 * 入力値のランダムな範囲を整数値がテキストで書かれた物と見做してパースし、演算を行ってからテキストに戻して元の位置に書き直すmutatorを持つ(ChangeASCIIInt)
 * 2つの入力値を引数にとって両者をランダムに混ぜ合わせるmutatorを持つ(Crossover)
-* LLVMの-fsanitize-coverage=trace-cmpを使って比較演算のログを取り、比較の両辺の値を辞書として用いるmutatorを持つ(CMP)
+* LLVMの`-fsanitize-coverage=trace-cmp`を使って比較演算のログを取り、比較の両辺の値を辞書として用いるmutatorを持つ(CMP)
 * 辞書の単語を使って作った入力値がcorpusに追加された場合にその単語が自動で登録されていくPersistent Auto Dictionaryを持つ
 * mutationを所定の回数(デフォルト 100回)実行して作った新しい入力値を実行してもcorpusに追加すべき実行結果が得られなかった場合、決められた回数(デフォルト 5回)まで同じ入力値に対してmutationをやり直す
 * 入力値の特定の範囲だけをmutationするように指示することができる(Mask)
@@ -27,7 +27,7 @@ fuzzingの対象とfuzzerの実装自体が同じプロセス内に存在する�
 
 といった問題が生じる。
 
-libFuzzerは前者を達成するために-fsanitize-coverage=edgeを付けてビルドされたfuzzingの対象と-fsanitize-coverage=edgeを付けずにビルドされたlibFuzzerのライブラリをリンクする。このとき、libFuzzer側のインライン関数がfuzzingの対象のビルド時にコンパイルされる事が無いように注意深く実装されている。ハーネスのカバレッジが記録される点は気にしない。
+libFuzzerは前者を達成するために`-fsanitize-coverage=edge`を付けてビルドされたfuzzingの対象と`-fsanitize-coverage=edge`を付けずにビルドされたlibFuzzerのライブラリをリンクする。このとき、libFuzzer側のインライン関数がfuzzingの対象のビルド時にコンパイルされる事が無いように注意深く実装されている。ハーネスのカバレッジが記録される点は気にしない。
 
 後者を達成する為にlibFuzzerはハーネスの実行前と実行後にサニタイザが抱えている情報を漁り、必要に応じて書き換えている。LLVMのサニタイザの実装は将来に渡って互換性が保たれるAPIではない(し、実際時々変わっている)が、libFuzzer自体がLLVMの一部でLLVMと一緒にバージョンアップしている為、対応するバージョンのLLVMのサニタイザと組み合わせられれば良い、というスタンスでお構いなしに中身を漁っている。
 
@@ -39,7 +39,7 @@ libFuzzerはLLVM 4でllvm本体のlib以下に実装され、LLVM 5でcompiler-r
 
 ## fuzzufにおける実装
 
-[移植の状況](/docs/algorithms/libFuzzer/porting_status_ja.md)
+[移植の状況](/docs/algorithms/libfuzzer/porting_status_ja.md)
 
 ## libFuzzerの仕組み
 

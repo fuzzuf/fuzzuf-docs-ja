@@ -4,7 +4,7 @@
 
 https://github.com/nezha-dt/nezha
 
-NezhaはLLVMのlibFuzzerを拡張して作られたdifferential fuzzingの実装で、greybox fuzzingでもblackbox fuzzingでも用いる事ができる(とされているが、上記の実装ではgreybox fuzzingのみが実装されているように見える)。
+NezhaはLLVMのlibFuzzerを拡張して作られたdifferential fuzzingの実装で、greybox fuzzingでもblackbox fuzzingでも用いる事ができる(とされているが、上記の実装ではgreybox fuzzingのみが実装されているように見える)。Nezhaはfuzzufでもdifferential fuzzingが実装可能であることを示すユースケースの一つとして再実装された。
 
 NezhaはlibFuzzerの一部を書き換えて実装されているため、アルゴリズムの殆どの部分はlibFuzzerと同じである。ただし、1つの入力値使って、複数の異なる実装で同じ処理をするターゲットを実行し、一部のターゲットだけが他と異なる出力になるような入力を「一部の実装の不具合を突く入力」と見做す点がlibFuzzerと異なる。
 
@@ -26,11 +26,11 @@ githubのNezhaのリポジトリではlibFuzzerのコードの追加および新
 
 ただし、様々な時点のlibFuzzerのソースとNezhaのソースでdiffをとって差分の量を比較した結果、現在のNezhaのmasterはLLVM 4.xブランチがLLVMのmasterから分かれた後、LLVM 5.0.0-rc1が作られるより前のmasterのどこかからforkしたとすると最も差分が小さくなる。
 
-NezhaのmasterとLLVM 5.0.0-rc1時点のlibFuzzerのdiffをとった物は[こんな内容](/docs/algorithms/Nezha/nezha-5.0.0-rc1.diff)になる。
+NezhaのmasterとLLVM 5.0.0-rc1時点のlibFuzzerのdiffをとった物は[こんな内容](/docs/algorithms/nezha/nezha-5.0.0-rc1.diff)になる。
 
 ## fuzzufにおける実装
 
-[移植の状況](/docs/algorithms/Nezha/porting_status_ja.md)
+[移植の状況](/docs/algorithms/nezha/porting_status_ja.md)
 
 ## Nezha固有のノード
 
