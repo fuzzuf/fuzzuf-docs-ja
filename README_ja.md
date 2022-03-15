@@ -4,7 +4,7 @@
 
 **fuzzuf**（**fuzz**ing **u**nification **f**ramework）は、DSLによるファジングループ（fuzzing loop）の柔軟な設定と拡張性を兼ね備えた、ファジングツール（ファザー）記述のためのフレームワークです。
 
-fuzzufのビルド方法とチュートリアルは、[TUTORIAL_ja.md](/TUTORIAL_ja.md)を参照してください。
+fuzzufのビルド方法とチュートリアルは、[build.md](/docs/building.md)と[tutorial_ja.md](/docs/tutorial_ja.md)を参照してください。
 
 
 ## fuzzufの目的 (Why use fuzzuf?)
@@ -91,6 +91,20 @@ fuzzufにおいて、差分によるファジング（differential fuzzing）の
 - [アルゴリズム概要](/docs/algorithms/nezha/algorithm_ja.md)
 - [アルゴリズム詳細](/docs/algorithms/nezha/algorithm_ja.md#nezha固有のノード)
 - [fuzzufでの実装](/docs/algorithms/nezha/algorithm_ja.md#fuzzufにおける実装)
+
+### DIE
+DIEは、JavaScriptエンジンに対する文法ベースファザーです。
+JavaScriptの文法的に正しい入力を生成するだけでなく、aspect-preservingと呼ばれる、入力コーパスの持つスクリプトの特徴（aspect）を保持したままミューテーションすることで、過去に発見されたバグと似た種類のバグを見つけることを目的としています。
+
+- [紹介とCLIの使い方](/docs/algorithms/die/algorithm_ja.md)
+- [アルゴリズム概要](/docs/algorithms/die/algorithm_ja.md#アルゴリズム概要)
+
+### Nautilus
+Nautilusは、ユーザーが定義した文法に従って入力を生成・ミューテーションする文法ベースファザーです。
+文法をユーザーができるため、インタプリタやファイルパーサのように特定の文法・ファイル構造に従った入力のみを受理するプログラムのファジングに有効なだけでなく、文法定義を一部のルール絞ることで、検査したい機能を重点的に調べるようなファジングも可能となります。
+
+- [紹介とCLIの使い方](/docs/algorithms/nautilus/algorithm_ja.md)
+- [アルゴリズム概要](/docs/algorithms/nautilus/algorithm_ja.md#3-アルゴリズム概要)
 
 ## ライセンス
 

@@ -10,10 +10,10 @@ fuzzufの文書は、当初日本語で書かれた文書が主であり、そ�
 
 ## 文書一覧
 
-対応するfuzzufバージョン: [v0.2.0](https://github.com/fuzzuf/fuzzuf/tree/v0.2.0)
+対応するfuzzufバージョン: [v0.3.0](https://github.com/fuzzuf/fuzzuf/tree/v0.3.0)
 
 - [README_ja.md](/README_ja.md)
-- [チュートリアル](/TUTORIAL_ja.md)
+- [チュートリアル](/docs/tutorial_ja.md)
 - [なぜfuzzufはRustに移行しなかったのか (Why we didn't move to Rust)](/docs/why_we_didnt_move_to_rust_ja.md)
 - AFL:
   - [algorithm_ja.md](/docs/algorithms/afl/algorithm_ja.md)
@@ -25,9 +25,13 @@ fuzzufの文書は、当初日本語で書かれた文書が主であり、そ�
   - [algorithm_ja.md](/docs/algorithms/die/algorithm_ja.md)
 - libFuzzer:
   - [algorithm_ja.md](/docs/algorithms/libfuzzer/algorithm_ja.md)
+  - [implementation_ja.md](/docs/algorithms/libfuzzer/implementation_ja.md)
   - [porting_status_ja.md](/docs/algorithms/libfuzzer/porting_status_ja.md)
+- Nautilus:
+  - [algorithm_ja.md](/docs/algorithms/nautilus/algorithm_ja.md)
 - Nezha:
   - [algorithm_ja.md](/docs/algorithms/nezha/algorithm_ja.md)
+  - [implementation_ja.md](/docs/algorithms/nezha/implementation_ja.md)
   - [porting_status_ja.md](/docs/algorithms/nezha/porting_status_ja.md)
 - VUzzer:
   - [algorithm_ja.md](/docs/algorithms/vuzzer/algorithm_ja.md)
